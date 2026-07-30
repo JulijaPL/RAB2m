@@ -1854,6 +1854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39195025aa5fa449b663070ba4d055e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beerImagesParents: {fileID: 1720933211}
+  mojitoImagesParents: {fileID: 1407023766}
   drinkText: {fileID: 1739887555}
   beerSprites:
   - {fileID: 885280669175613313, guid: 07586b2298b9f994f84d8502f63ce0ce, type: 3}
@@ -1874,7 +1876,12 @@ MonoBehaviour:
   - {fileID: 1811723280}
   - {fileID: 1817936184}
   - {fileID: 1836511677}
-  mojitoImages: []
+  mojitoImages:
+  - {fileID: 2054686526}
+  - {fileID: 1245127305}
+  - {fileID: 1411867629}
+  - {fileID: 1220290077}
+  - {fileID: 23475008}
   counter: {fileID: 1158369498}
   currentTarget: 0
 --- !u!1 &1142168830
@@ -2100,15 +2107,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158369495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2808d5e535ac22046aa7385fb05c8c59, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c71d2d761cfefd4b88e13d6d1bd46a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DrinksTextCounter: {fileID: 33081338}
+  DrinksTextCounter: {fileID: 555652490}
   drinksCounter: 0
   BadCounter: {fileID: 924214089}
   badCounter: 0
   GoodCounter: {fileID: 1159816297}
   goodCounter: 0
+  spawner: {fileID: 1479284591}
 --- !u!1 &1159816296
 GameObject:
   m_ObjectHideFlags: 0

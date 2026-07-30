@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BeerTouching : MonoBehaviour
 {
+    [SerializeField] GameObject beerImagesParents;
+    [SerializeField] GameObject mojitoImagesParents;
     public TextMeshProUGUI drinkText;
 
     [SerializeField] Sprite[] beerSprites;
@@ -33,6 +35,14 @@ public class BeerTouching : MonoBehaviour
         UpdateImageSet();
         UpdateDrinkText();
 
+        if (currentTarget == IngredientType.Beer)
+        {
+            ShowBeer();
+        }
+        else if (currentTarget == IngredientType.Mojito)
+        {
+            ShowMojito();
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -110,6 +120,15 @@ public class BeerTouching : MonoBehaviour
 
         currentTarget = newTarget;
 
+        if (currentTarget == IngredientType.Beer)
+        {
+            ShowBeer();
+        }else if(currentTarget == IngredientType.Mojito)
+        {
+            ShowMojito();
+        }
+       
+
         UpdateSprites();
         UpdateImageSet();
         UpdateDrinkText();
@@ -175,6 +194,19 @@ public class BeerTouching : MonoBehaviour
             currentImages[currentImagesIndex].color = Color.white;
             currentImagesIndex++;
         }
+    }
+
+    void ShowBeer()
+    {
+        beerImagesParents.SetActive(true);
+        mojitoImagesParents.SetActive(false);
+
+    }
+   
+    void ShowMojito()
+    {
+        beerImagesParents.SetActive(false);
+        mojitoImagesParents.SetActive(true);
     }
 }
 

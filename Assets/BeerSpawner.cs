@@ -4,10 +4,10 @@ using UnityEngine;
 public class BeerSpawner : MonoBehaviour
 {
     public GameObject[] prefab;
-    public float spawnRate = 4.0f;
-    public float spawnRange = 5.0f;
-    [SerializeField] float spawnY = 6f;
-    [SerializeField] float fallingSpeed = 1.5f;
+    public float spawnRate = 7f;
+    public float spawnRange = 7f;
+    public float spawnY = 7f;
+    public float fallingSpeed = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
