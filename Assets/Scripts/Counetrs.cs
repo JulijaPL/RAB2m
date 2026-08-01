@@ -5,7 +5,9 @@ public class Counetrs : MonoBehaviour
 {
 
     public TextMeshProUGUI DrinksTextCounter;
+    public TextMeshProUGUI DrinksTextPCounter;
     [SerializeField] int drinksCounter = 0;
+    [SerializeField] int pCounter = 0;
 
     public TextMeshProUGUI BadCounter;
     [SerializeField] int badCounter = 0;
@@ -15,11 +17,14 @@ public class Counetrs : MonoBehaviour
 
     public BeerSpawner spawner;
 
+   
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        
+        drinksCounter = PlayerPrefs.GetInt("Drinks", 0);
+        DrinksTextCounter.text = drinksCounter.ToString();
+        DrinksTextPCounter.text = pCounter.ToString();
     }
 
     // Update is called once per frame
@@ -30,22 +35,27 @@ public class Counetrs : MonoBehaviour
     public void AddBeer()
     {
         drinksCounter++;
+        pCounter++;
         DrinksTextCounter.text = drinksCounter.ToString();
-        if (drinksCounter == 3)
+        DrinksTextPCounter .text = pCounter.ToString();
+       
+        if (pCounter == 3)
         {
             EasyLevel();
-        }else if (drinksCounter == 5)
+        }else if (pCounter == 5)
         {
             NormalLevel();
         }
-        else if (drinksCounter == 8)
+        else if (pCounter == 8)
         {
             HarderLevel();
         }
-        else if (drinksCounter == 12)
+        else if (pCounter == 12)
         {
             HardestLevel();
         }
+        PlayerPrefs.SetInt("Drinks", drinksCounter);
+      
     }
 
     public void AddBadIngredients()
