@@ -23,12 +23,13 @@ public class BeerTouching : MonoBehaviour
     private int currentSpriteIndex = 0;
     private SpriteRenderer sr;
     [SerializeField] Counetrs counter;
+    public Transform SpriteTransform;
 
     public IngredientType currentTarget;
     void Start()
     {
         sr = GetComponentInParent<SpriteRenderer>();
-
+       
          
         
         UpdateSprites();
@@ -178,13 +179,16 @@ public class BeerTouching : MonoBehaviour
         {
         case IngredientType.Beer:
         currentImages = beerImages;
+                SpriteTransform.localPosition = new Vector3(0, -1.61f , 0);
                 break;
 
             case IngredientType.Mojito:
-         currentImages = mojitoImages;   
+         currentImages = mojitoImages;
+                SpriteTransform.localPosition = new Vector3(0, -1.85f, 0);    
                 break;
         }
         ResetImages();
+        
     }
 
    void UpdateImages()
