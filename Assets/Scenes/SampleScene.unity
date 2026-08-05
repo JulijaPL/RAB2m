@@ -3210,6 +3210,7 @@ MonoBehaviour:
   - {fileID: 1220290077}
   - {fileID: 23475008}
   counter: {fileID: 1158369498}
+  SpriteTransform: {fileID: 1142168834}
   currentTarget: 0
 --- !u!1 &1142168830
 GameObject:
@@ -3449,6 +3450,9 @@ MonoBehaviour:
   GoodCounter: {fileID: 1159816297}
   goodCounter: 0
   spawner: {fileID: 1479284591}
+  medal20: {fileID: 759745739}
+  medal0: {fileID: 1790263457}
+  meda100: {fileID: 83110006}
 --- !u!114 &1158369499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,10 +4483,11 @@ MonoBehaviour:
   - {fileID: 4886489206958829801, guid: 4445bb61b0f29e1489731a629e1ae74d, type: 3}
   - {fileID: 4886489206958829801, guid: 4445bb61b0f29e1489731a629e1ae74d, type: 3}
   - {fileID: 3183924470279352811, guid: 5895bf1a1398da34cae2ac8a47f3e6fd, type: 3}
-  spawnRate: 4.06
-  spawnRange: 1
-  spawnY: 6
+  spawnRate: 8
+  spawnRange: 10
+  spawnY: 7
   fallingSpeed: 2
+  spawnCount: 3
 --- !u!1 &1487559179
 GameObject:
   m_ObjectHideFlags: 0

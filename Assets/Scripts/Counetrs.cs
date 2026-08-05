@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -84,33 +83,33 @@ public class Counetrs : MonoBehaviour
     
     void EasyLevel()
     {
-        spawner.spawnRate = 8f;
+        spawner.spawnRate = 1.5f;
         spawner.spawnRange = 8f;
         spawner.fallingSpeed = 2.5f;
     }
 
     void NormalLevel()
     {
-        spawner.spawnRate = 9f;
-        spawner.spawnRange = 7f;
-        spawner.fallingSpeed = 4f;
-        spawner.spawnY = 8f;
+        spawner.spawnRate = 1f;
+        spawner.spawnRange = 8f;
+        spawner.fallingSpeed = 3f;
+        spawner.spawnY = 5f;
     }
 
     void HarderLevel()
     {
-        spawner.spawnRate = 8f;
+        spawner.spawnRate = 0.9f;
         spawner.spawnRate = 8f;
         spawner.fallingSpeed = 3.5f;
-        spawner.spawnY = 10f;
+        spawner.spawnY = 5f;
     }
 
     void HardestLevel()
     {
-        spawner.spawnRate = 10f;
-        spawner.spawnRange = 10f;
+        spawner.spawnRate = 0.8f;
+        spawner.spawnRange = 8f;
         spawner.fallingSpeed = 4.5f;
-        spawner.spawnY = 12f;
+        spawner.spawnY = 5f;
     }
 
     void SetMedal(Image medal, string key)
